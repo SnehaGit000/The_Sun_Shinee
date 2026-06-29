@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_sun_shine/screens/login_screen.dart';
-import 'package:the_sun_shine/screens/register_screen.dart';
+//import 'package:the_sun_shine/screens/register_screen.dart';
 import 'package:the_sun_shine/utils/custom_appbar.dart';
 import 'package:the_sun_shine/utils/custom_button.dart';
 //import 'package:the_sun_shine/utils/custom_text.dart';
