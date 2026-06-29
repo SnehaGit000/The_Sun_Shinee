@@ -18,7 +18,18 @@ class ProfileAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Stack(
+          clipBehavior: Clip.none, //Don't cut anything outside.Normally, Flutter cuts off anything that goes outside a widget's boundaries.
+          children: [
 
+          //Profile Image
+            CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage(imgPath),
+            ),
+
+          ],
+        ),
       ],
     );
   }

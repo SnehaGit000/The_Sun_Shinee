@@ -15,6 +15,9 @@ class Profilescreen extends StatelessWidget {
           navigationPushReplacement(context, HomeScreen());
         },
       ),
+      body: Center(
+        
+      ),
     );
   }
 }
