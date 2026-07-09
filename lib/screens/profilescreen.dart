@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_sun_shine/screens/home.dart';
 import 'package:the_sun_shine/utils/navigations.dart';
 import '../utils/custom_appbar.dart';
+import '../widgets/profile_avatar.dart';
 
 class Profilescreen extends StatelessWidget {
   const Profilescreen({super.key});
@@ -15,9 +16,14 @@ class Profilescreen extends StatelessWidget {
           navigationPushReplacement(context, HomeScreen());
         },
       ),
-      body: Center(
-        
-      ),
-    );
+      body: 
+        ProfileAvatar(
+          imgPath: "imges/profilepic.png",
+          userName: 'Sneha Chakraborty',
+          onEdit: (){
+            print('Chane profile picture');
+          },
+        )
+      );
   }
 }

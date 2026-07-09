@@ -16,9 +16,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeState extends State<HomeScreen> {
   final TextEditingController _searchController = TextEditingController();
-  
 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,62 +155,63 @@ class _HomeState extends State<HomeScreen> {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'See All',
-                        style: TextStyle(color: Color.fromRGBO(194, 153, 88, 1),fontSize: 18),
-                      ),
-                      )
-        // Catagory grid
-                  ],
+                    onPressed: () {},
+                    child: Text(
+                      'See All',
+                      style: TextStyle(
+                          color: Color.fromRGBO(194, 153, 88, 1), fontSize: 18),
+                    ),
+                  )
+                  // Catagory grid
+                ],
               ),
-             ),
-             SizedBox(height: 200,
-             child: GridView.builder(
+            ),
+            SizedBox(
+              height: 200,
+              child: GridView.builder(
                 scrollDirection: Axis.horizontal,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,// 🔥 2 ROWS
-                  mainAxisSpacing: 4,
-                  crossAxisSpacing: 5,
-                  childAspectRatio: 0.8
-
-                ),
-                itemBuilder: (context, index){
+                    crossAxisCount: 2, // 2 ROWS
+                    mainAxisSpacing: 4,
+                    crossAxisSpacing: 5,
+                    childAspectRatio: 0.8),
+                itemBuilder: (context, index) {
                   final item = categories[index];
 
-                  return Padding(padding: EdgeInsets.symmetric(horizontal: 5),
+                  return Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 5),
                     child: Column(
                       children: [
-        //Circle Image
+                        //Circle Image
                         CircleAvatar(
                           radius: 35,
                           backgroundColor: Colors.orange.shade100,
-                          backgroundImage: AssetImage(item.image,
-                          
+                          backgroundImage: AssetImage(
+                            item.image,
                           ),
                         ),
-                        Text(item.name,
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontStyle: FontStyle.normal,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w400,
-                          //height: 0.7,// line-height: 70%
-                          letterSpacing: 0,
+                        Text(
+                          item.name,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w400,
+                            //height: 0.7,// line-height: 70%
+                            letterSpacing: 0,
+                          ),
                         ),
-                        ),
-
                       ],
                     ),
                   );
                 },
-                ),
               ),
-    //Reward Section
-              Padding(
-                padding: const EdgeInsets.only(top:20.0,left:20,right:20),
-                child: Stack(
-                  children: [
+            ),
+            //Reward Section
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0, left: 20, right: 20),
+              child: Stack(
+                children: [
                   Container(
                     height: 140,
                     decoration: BoxDecoration(
@@ -223,81 +222,86 @@ class _HomeState extends State<HomeScreen> {
                   Positioned(
                     left: 24,
                     top: 20,
-                    child:Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Get 20 points',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal,
-                        ),
-                        ),
-                        SizedBox(height: 8,),
-                        Text('To get your reward',
-                        style: TextStyle(
+                        Text(
+                          'Get 20 points',
+                          style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'To get your reward',
+                          style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                       ],
                     ),
-                    ),
-                    Positioned(
+                  ),
+                  Positioned(
                       left: 24,
-                      bottom:15,
-                      child:ElevatedButton(onPressed:(){}, 
-                      child: Text('Check In',
-                      style: TextStyle(
-                        color: Color(0XFFC29958), 
-                      ),)
-                      )
-                    ),
-
-                    Positioned(
-                      right: 30,
-                      bottom: 0,
-                      top: 0,
-                      child:Image.asset('assets/images/model.png',
+                      bottom: 15,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Check In',
+                            style: TextStyle(
+                              color: Color(0XFFC29958),
+                            ),
+                          ))),
+                  Positioned(
+                    right: 30,
+                    bottom: 0,
+                    top: 0,
+                    child: Image.asset(
+                      'assets/images/model.png',
                       //fit: BoxFit.cover,
-                      ), 
-                      )
-                    
-                  ],
-
-                ),
+                    ),
+                  )
+                ],
               ),
-              Padding(
-                padding:  EdgeInsets.only(top:15, left:20,right: 25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Offers",
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 15, left: 20, right: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Offers",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: Colors.black,
                     ),
-                    ),
-                    Text('See All',
-                    style:TextStyle(
-                      decoration: TextDecoration.underline,
-                      decorationColor: Color(0xFFC29958),
-                      decorationThickness: 4,
-                      color:Color(0XFFC29958)
-                    ), 
-                    )
-                  ],
-                ),
+                  ),
+                  Text(
+                    'See All',
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        decorationColor: Color(0xFFC29958),
+                        decorationThickness: 4,
+                        color: Color(0XFFC29958)),
+                  )
+                ],
               ),
-              SizedBox(height: 30,),
-              Padding(
-                padding: const EdgeInsets.only(left: 20,right: 20),
-                child: ProductGrid(),
-              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: ProductGrid(),
+            ),
 
-              SizedBox(height: 20,),
-              Text('Recommended for you'),
+            SizedBox(
+              height: 20,
+            ),
+            Text('Recommended for you'),
           ],
         ),
       ),
