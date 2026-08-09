@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: SplashScreen(),
+      home: SplashScreen(),
       //home: OtpVerification(),
       //home: LoginScreen(),
       //home: ForgotPasswordScreen(),
       //home: ResetPassword()
-      home: HomeScreen()
+      //home: HomeScreen()
       //home: Verified(),
       //home: CustomBottomNavigationBar()
       //home: Profilescreen(),

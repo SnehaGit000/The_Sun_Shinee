@@ -23,14 +23,14 @@ class ProfileAvatar extends StatelessWidget {
                 .none, //Don't cut anything outside.Normally, Flutter cuts off anything that goes outside a widget's boundaries.
             children: [
               //Profile Image
-               Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: CircleAvatar(
-                    radius: 60,
-                    backgroundImage: AssetImage(imgPath),
-                  ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: CircleAvatar(
+                  radius: 60,
+                  backgroundImage: AssetImage(imgPath),
                 ),
-              
+              ),
+
               //Edit Button
               Positioned(
                 left: 80,
@@ -56,12 +56,12 @@ class ProfileAvatar extends StatelessWidget {
             ],
           ),
           Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Text(
-                  userName,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
+            padding: const EdgeInsets.only(top: 20),
+            child: Text(
+              userName,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
         ],
       ),
     );

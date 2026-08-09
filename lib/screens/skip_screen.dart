@@ -1,27 +1,11 @@
 import'package:flutter/material.dart';
 import'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:the_sun_shine/utils/custom_button.dart';
-//import 'package:flutter/widgets.dart';
-
-void main(){
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SkipScreen(),
-    );
-  }
-}
-
+import 'package:the_sun_shine/screens/skip_screen1.dart';
+import 'package:the_sun_shine/utils/navigations.dart';
 
 class SkipScreen extends StatefulWidget {
-   SkipScreen({super.key});
+   const SkipScreen({super.key});
 
   @override
   State<SkipScreen> createState() => _SkipScreenState();
@@ -74,7 +58,9 @@ final PageController _controller = PageController();
             Padding(padding: EdgeInsets.all(8.0),
             child: CustomButtonScr(
             text: 'Next', 
-          //onPressed: () {}
+            onPressed: () {
+            navigationPushReplacement(context,Skip1Screen());
+          },
             ),
             ),
           ],

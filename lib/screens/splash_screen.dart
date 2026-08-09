@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import'package:flutter/material.dart';
-import 'package:the_sun_shine/screens/register_screen.dart';
+import 'package:the_sun_shine/screens/skip_screen.dart';
 import 'package:the_sun_shine/utils/navigations.dart';
+
 
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //   context,
       //   MaterialPageRoute(builder: (context) => RegisterScreen()),
       // );
-      navigationPushReplacement(context, RegisterScreen());
+      navigationPushReplacement(context, SkipScreen());
     });
   }
 
