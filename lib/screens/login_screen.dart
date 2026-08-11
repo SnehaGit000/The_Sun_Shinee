@@ -23,9 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController password= TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: CustomAppBar(
           onPressed: () => navigationPop(context, RegisterScreen()),
         ),
@@ -100,8 +98,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
             ),
           ),
-          
-        ),
     );
   }
 }
