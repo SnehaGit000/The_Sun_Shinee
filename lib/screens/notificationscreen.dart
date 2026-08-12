@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/custom_appbar.dart';
 import '../utils/navigations.dart';
 import '../screens/home.dart';
+import '../widgets/custom_bottom_navigationbar.dart';
 
 class Notificationscreen extends StatelessWidget {
   const Notificationscreen({super.key});
@@ -15,6 +16,9 @@ class Notificationscreen extends StatelessWidget {
           navigationPushReplacement(context, HomeScreen());
         },
       ),
+        bottomNavigationBar: CustomBottomNavigationBar(
+          currentIndex: 3,
+  ),
     );
   }
 }

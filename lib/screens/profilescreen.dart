@@ -3,6 +3,7 @@ import 'package:the_sun_shine/screens/home.dart';
 import 'package:the_sun_shine/utils/navigations.dart';
 import '../utils/custom_appbar.dart';
 import '../widgets/profile_avatar.dart';
+import '../widgets/custom_bottom_navigationbar.dart';
 
 class Profilescreen extends StatelessWidget {
   const Profilescreen({super.key});
@@ -23,7 +24,9 @@ class Profilescreen extends StatelessWidget {
           onEdit: (){
             print('Chane profile picture');
           },
-        )
+        ),
+        bottomNavigationBar: CustomBottomNavigationBar(
+          currentIndex: 4),
       );
   }
 }

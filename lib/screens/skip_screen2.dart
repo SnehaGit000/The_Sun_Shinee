@@ -46,7 +46,7 @@ class _Skip2ScreenState extends State<Skip2Screen> {
             Padding(
               padding: EdgeInsets.all(30.0),
               child: Slidedot(
-                count: 4,
+                count: 3,
               ),
             ),
             Padding(

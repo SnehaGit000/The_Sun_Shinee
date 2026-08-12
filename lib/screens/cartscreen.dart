@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/custom_appbar.dart';
 import '../utils/navigations.dart';
 import '../screens/home.dart';
+import '../widgets/custom_bottom_navigationbar.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -15,6 +16,9 @@ class CartScreen extends StatelessWidget {
           navigationPushReplacement(context, HomeScreen());
         },
       ),
+       bottomNavigationBar: CustomBottomNavigationBar(
+          currentIndex: 2,
+        ),
     );
   }
 }
