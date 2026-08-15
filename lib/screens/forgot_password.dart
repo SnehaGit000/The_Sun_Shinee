@@ -62,11 +62,11 @@ final GlobalKey<FormState> formKey = GlobalKey<FormState>();// important , use e
                 onPressed: () {
 
                   if (formKey.currentState!.validate()) {
-      // If the form is valid, display a snackbar. In the real world,
-      // you'd often call a server or save the information in a database.
-      //ScaffoldMessenger.of(context).showSnackBar(
-      //  const SnackBar(content: Text('Processing Data')),
-      //);
+      /* If the form is valid, display a snackbar. In the real world,
+      you'd often call a server or save the information in a database.
+      ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Processing Data')),
+      );*/
               navigationPush(context, OtpVerification());
     }
 

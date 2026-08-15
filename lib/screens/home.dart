@@ -51,31 +51,14 @@ class _HomeState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-
-                //Row(
-                //   children: [
-                //     SizedBox(width: 10),
-                //     Icon(
-                //       Icons.search,
-                //       color: Colors.grey,
-                //     ),
-                //     SizedBox(
-                //       width: 5,
-                //     ),
-                //     Text(
-                //       'Search',
-                //       style: TextStyle(color: Colors.grey),
-                //     )
-                //   ],
-                // ),
               ),
             ),
 
             //Circular Profile Icons
             Padding(
               padding: EdgeInsets.only(left: 10),
-              //CircleAvatar is used to create a circular background for the profile icon.
-              //We can customize it by using: backgroundImage: AssetImage('assets/profile.jpg'),
+              /*CircleAvatar is used to create a circular background for the profile icon.
+              We can customize it by using: backgroundImage: AssetImage('assets/profile.jpg'),*/
               child: CircleAvatar(
                 radius: 20,
                 backgroundColor: Colors.black,
@@ -125,7 +108,7 @@ class _HomeState extends State<HomeScreen> {
                             shape: StadiumBorder(),
                             foregroundColor: Colors.white,
                             padding: const EdgeInsets.symmetric(
-                                //button er bhetorer space
+                                // space in button
                                 horizontal: 16,
                                 vertical: 6),
                           ),
