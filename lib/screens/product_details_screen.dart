@@ -26,6 +26,7 @@ class ProductDetailsScreen extends StatelessWidget {
             ),
             Padding(padding: EdgeInsets.all(20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 
                 //Discount
@@ -72,7 +73,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 Text('\$${product.price}',
                 style: TextStyle(
                   color: Color(0xffC29958),
-                      fontSize: 26,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                 ),
                 ),
@@ -80,7 +81,22 @@ class ProductDetailsScreen extends StatelessWidget {
                  const SizedBox(height: 30),
                   
                   //Add to Cart
-                  
+                  SizedBox(
+                    width: double.infinity,
+                    height: 55,
+                    child: ElevatedButton.icon(
+                      onPressed: (){
+
+                         // Cart functionality will be added later
+
+                      },
+                      icon: const Icon(Icons.shopping_cart), 
+                      label: Text(
+                        'Add to Cart',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                  ),
               ],
             ),
             )
