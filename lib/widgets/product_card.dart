@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:the_sun_shine/utils/navigations.dart';
 import '../models/product_model.dart';
 import '../screens/product_details_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/wishlist_provider.dart';
 
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends ConsumerWidget {
   final ProductModel product;
 
   ProductCard({
@@ -13,7 +15,7 @@ class ProductCard extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
       onTap: () {
         navigationPush(context,ProductDetailsScreen(
@@ -56,10 +58,20 @@ class ProductCard extends StatelessWidget {
               Positioned(
                   right: 12,
                   top: 12,
-                  child: Icon(
-                    Icons.favorite_border,
+                  child: IconButton(
+                    onPressed: (){
+                      ref
+                      .read(wishlistProvider.notifier)
+                      .toggleWishlist(product.id);
+                    },
+                     
+                    icon: Icon(
+                      ref.watch(wishlistProvider).contains(product.id)
+                      ? Icons.favorite
+                      : Icons.favorite_border,
                     size: 30,
                     color: Color(0xff9D7A44),
+                    )
                   )
                 ),
       //bottom info

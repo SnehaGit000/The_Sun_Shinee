@@ -2,12 +2,14 @@ import '../models/product_model.dart';
 
 final List products = [
   ProductModel(
+    id: 1,
     image: "assets/images/dress (1).png",
     title: "Baby Outfit",
     price: '46',
     rating: 4.3,
   ),
   ProductModel(
+    id: 2,
     image: "assets/images/dress (2).png",
     title: "Maxi Coat",
     price: "3569",
@@ -15,6 +17,7 @@ final List products = [
     rating: 4.3,
   ),
   ProductModel(
+    id: 3,
     image: "assets/images/dress (3).png",
     title: "Red Dress",
     price: "680",
@@ -22,6 +25,7 @@ final List products = [
     rating: 4.3,
   ),
   ProductModel(
+    id: 4,
     image: "assets/images/dress (4).png",
     title: "Lady Dress",
     price: "963",
@@ -29,6 +33,7 @@ final List products = [
     rating: 4.3,
   ),
   ProductModel(
+    id: 5,
     image: "assets/images/dress (5).png",
     title: "White Dress",
     price: "250",
@@ -36,6 +41,7 @@ final List products = [
     rating: 4.3,
   ),
   ProductModel(
+    id: 6,
     image: "assets/images/dress (6).png",
     title: "Purple Dress",
     price: "1130",
@@ -43,6 +49,7 @@ final List products = [
     rating: 4.3,
   ),
   ProductModel(
+    id: 7,
     image: "assets/images/dress (7).png",
     title: "Flowery Dress",
     price: "946",
@@ -50,6 +57,7 @@ final List products = [
     rating: 4.3,
   ),
   ProductModel(
+    id: 8,
     image: "assets/images/dress (8).png",
     title: "Pink Dress",
     price: "520",

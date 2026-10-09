@@ -11,7 +11,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: "Notification",
+        title: "My Cart",
         onPressed:() {
           navigationPushReplacement(context, HomeScreen());
         },

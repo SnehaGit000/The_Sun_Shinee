@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/product_model.dart';
+import '../providers/wishlist_provider.dart';
 
-class ProductDetailsScreen extends StatelessWidget {
+class ProductDetailsScreen extends ConsumerWidget {
   const ProductDetailsScreen({super.key, required this.product});
 
   final ProductModel product;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+
+    final isWishlisted = ref.watch(wishlistProvider).contains(product.id);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Product Details'),
@@ -97,6 +102,33 @@ class ProductDetailsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                
+                
+                SizedBox(height: 15,),
+
+                //Add to Wishlist
+                SizedBox(
+                  width: double.infinity,
+                  height: 55,
+                  child:OutlinedButton.icon(
+                    onPressed: (){
+                      ref
+                        .read(wishlistProvider.notifier)
+                        .toggleWishlist(product.id);
+                    }, 
+                  icon:Icon(
+                    isWishlisted
+                      ?Icons.favorite
+                      :Icons.favorite_border,
+                  ),
+                  label:Text(
+                    isWishlisted
+                      ?'Remove from Wishlist'
+                      :'Add to Wishlist',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                 )
+                )
               ],
             ),
             )
