@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_sun_shine/screens/sign_up_screen.dart';
 import 'package:the_sun_shine/utils/custom_button.dart';
 import 'package:the_sun_shine/utils/slidedot.dart';
 import 'package:the_sun_shine/screens/login_screen.dart';
@@ -56,7 +57,7 @@ class _Skip2ScreenState extends State<Skip2Screen> {
                   width: 331,
                   height: 50,
                    onPressed: () {
-                    navigationPushReplacement(context, const LoginScreen());
+                    navigationPushReplacement(context, SignUp());
                   },
                 )
               ),

@@ -17,7 +17,7 @@ class Notificationscreen extends StatelessWidget {
         },
       ),
         bottomNavigationBar: CustomBottomNavigationBar(
-          currentIndex: 3,
+          currentIndex: 4,
   ),
     );
   }

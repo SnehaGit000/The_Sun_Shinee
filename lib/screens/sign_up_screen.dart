@@ -8,6 +8,9 @@ import 'package:the_sun_shine/utils/custom_button.dart';
 import 'package:the_sun_shine/utils/custom_text_field.dart';
 import 'package:the_sun_shine/utils/socialbutton.dart';
 import 'package:the_sun_shine/screens/register_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 
 
 class SignUp extends StatefulWidget {
@@ -20,9 +23,54 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
 
   TextEditingController name=TextEditingController();
+  TextEditingController email=TextEditingController();
   TextEditingController number=TextEditingController();
   TextEditingController password=TextEditingController();
-  TextEditingController confirmpassword=TextEditingController();
+  TextEditingController confirmPassword=TextEditingController();
+
+  bool isLoading = false;
+
+  Future<void> createAccount() async {
+    final userName = name.text.trim();
+    final userEmail = email.text.trim();
+    final userPassword = password.text;
+    final confirm = confirmPassword.text;
+
+    if (
+      userName.isEmpty ||
+      userEmail.isEmpty ||
+      userPassword.isEmpty ||
+      confirm.isEmpty
+    ){
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please fill in all required fields'))
+      );
+      return;
+    }
+    if (userPassword != confirm){
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Passwords do not match'))
+      );
+      return;
+    }
+
+     if (userPassword.length < 6) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Password must be at least 6 characters'),
+        ),
+      );
+      return;
+    }
+
+    setState(() => isLoading = true);
+
+    // try{
+    //   final credential = await FirebaseAuth.instance
+    // } on {
+
+    // }
+  }
 
   @override
   Widget build(BuildContext context) {

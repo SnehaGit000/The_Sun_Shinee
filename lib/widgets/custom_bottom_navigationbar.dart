@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_sun_shine/screens/cartscreen.dart';
+import 'package:the_sun_shine/screens/groceryscreen.dart';
 import 'package:the_sun_shine/screens/home.dart';
 import 'package:the_sun_shine/screens/notificationscreen.dart';
 import 'package:the_sun_shine/screens/profilescreen.dart';
@@ -39,15 +40,18 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         navigationPushReplacement(context, HomeScreen());
         break;
       case 1:
-        navigationPushReplacement(context, WishlistScreen());
+        navigationPushReplacement(context, GroceryScreen());
         break;
       case 2:
-        navigationPushReplacement(context, CartScreen());
+        navigationPushReplacement(context, WishlistScreen());
         break;
       case 3:
-        navigationPushReplacement(context, Notificationscreen());
+        navigationPushReplacement(context, CartScreen());
         break;
       case 4:
+        navigationPushReplacement(context, Notificationscreen());
+        break;
+      case 5:
         navigationPushReplacement(context, Profilescreen());
         break;
     }
@@ -66,6 +70,10 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_basket),
+          label: 'Grocery',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),

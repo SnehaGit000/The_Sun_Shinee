@@ -49,10 +49,10 @@ class WishlistScreen extends ConsumerWidget {
                 
                 return ProductCard(product: product);
               }
-              )  ,
-       bottomNavigationBar: CustomBottomNavigationBar(
-          currentIndex: 1,
-  ),
-    );
-  }
+            )  ,
+            bottomNavigationBar: CustomBottomNavigationBar(
+          currentIndex: 2,
+        ),
+      );
+    }
 }

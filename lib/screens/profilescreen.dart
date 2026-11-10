@@ -26,7 +26,7 @@ class Profilescreen extends StatelessWidget {
           },
         ),
         bottomNavigationBar: CustomBottomNavigationBar(
-          currentIndex: 4),
+          currentIndex: 5),
       );
   }
 }
